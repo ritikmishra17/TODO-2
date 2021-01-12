@@ -1,10 +1,13 @@
 from app import app, db
 from flask import render_template
 from model import Todo
-from update import update
-from add import add
-from delete import delete
+from update import update, update_bp
+from add import add, add_bp
+from delete import delete, delete_bp
 
+app.register_blueprint(delete_bp)
+app.register_blueprint(add_bp)
+app.register_blueprint(update_bp)
 
 @app.route('/')
 def index():
