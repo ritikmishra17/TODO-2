@@ -1,7 +1,7 @@
 from app import app, db
-from flask import url_for, redirect
+from flask import url_for, redirect, Blueprint
 from model import Todo
-from flask import Blueprint
+
 
 delete_bp = Blueprint('delete_bp', __name__)
 
