@@ -1,9 +1,12 @@
 from app import app, db
 from flask import url_for, redirect, request
 from model import Todo
+from flask import Blueprint
+
+add_bp = Blueprint('add_bp', __name__)
 
 
-@app.route("/add", methods=["POST"])
+@add_bp.route("/add", methods=["POST"])
 def add():
     title = request.form.get("title")
     desc = request.form.get("desc")
