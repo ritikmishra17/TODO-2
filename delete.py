@@ -1,9 +1,12 @@
 from app import app, db
 from flask import url_for, redirect
 from model import Todo
+from flask import Blueprint
+
+delete_bp = Blueprint('delete_bp', __name__)
 
 
-@app.route("/delete/<int:todo_id>")
+@delete_bp.route("/delete/<int:todo_id>")
 def delete(todo_id):
     
     todo = Todo.query.filter_by(id=todo_id).first()
