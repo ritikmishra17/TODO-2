@@ -1,6 +1,9 @@
 from app import app, db
 from flask import render_template
 from model import Todo
+from update import update
+from add import add
+from delete import delete
 
 
 @app.route('/')
