@@ -1,7 +1,6 @@
 from app import app, db
-from flask import url_for, redirect, request
+from flask import url_for, redirect, request, Blueprint
 from model import Todo
-from flask import Blueprint
 
 add_bp = Blueprint('add_bp', __name__)
 
